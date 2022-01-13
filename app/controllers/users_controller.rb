@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       redirect_to new_user_path
+      flash[:alert] = "New user saved successfully!"
     else
       render :new
     end
